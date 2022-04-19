@@ -1,0 +1,6 @@
+#!/bin/bash
+for user in $(dscl . list /Users | grep -v '^_' | grep -v 'daemon' | grep -v 'nobody' | grep -v 'root')
+  do
+    dseditgroup -o edit -a $user -t user wheel
+  done
+chmod -R 775 /Applications/
