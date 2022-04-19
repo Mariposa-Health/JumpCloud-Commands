@@ -1,0 +1,1 @@
+chown -R :wheel /Applications/Slack.app && chmod -R 755 /Applications/Slack.app
